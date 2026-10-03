@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 35px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    text-align: center;
+    color: #a0a0a0;
+    margin-bottom: 35px;
+    font-size: 0.95rem;
+}
+
+/* ===== Estilos para el section (por ID) ===== */
+#inicio-sesion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Inputs ===== */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    font-weight: 500;
+}
+
+#user_admin,
+#password {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#user_admin::placeholder,
+#password::placeholder {
+    color: #777;
+}
+
+#user_admin:focus,
+#password:focus {
+    border-color: #00d4ff;
+    background: rgba(0, 212, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+}
+
+/* ===== Botones ===== */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #00d4ff;
+    border: 1px solid rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: #00d4ff;
+}
