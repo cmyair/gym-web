@@ -85,27 +85,37 @@ function eliminar_miembro(id) {
 
 function agregar_nuevos_miembros() {
   document.getElementById("contenido").innerHTML = `
-
+    <div class="panel-form">
       <h2>Agregar Nuevo Miembro</h2>
       <form id="form-miembro" onsubmit="return false;">
-        <section id="agregar-miembro">
-          <div class="panel-agg-miem">
+        
+        <div class="form-group">
+          <label for="n_nombre">Nombre:</label>
+          <input type="text" id="n_nombre" placeholder="Ej: Alvaro" required>
+        </div>
 
-            <div class="form-group">
-              <label for="n_nombre">Ingrese su nombre:</label>
-              <input type ="text" id="n_nombre" placeholder="Ej: Alvaro" requird>
-            </div>
+        <div class="form-group">
+          <label for="n_apellido">Apellido:</label>
+          <input type="text" id="n_apellido" placeholder="Ej: Benavidez" required>
+        </div>
 
-            <div class="form-group">
-              <label for="n_apellido">Ingrese su apellido:</label>
-              <input type ="text" id="n_apellido" placeholder="Ej: Benavidez" requird>
-            </div>
+        <div class="form-group">
+          <label for="n_fechaNacimiento">Fecha de Nacimiento:</label>
+          <input type="date" id="n_fechaNacimiento" required>
+        </div>
 
-            <div class="form-group">
-              <label for="n_fechaNacimiento">Fecha de Nacimiento:</label>
-              <input type ="date" id="n_fechaNacimiento" requird>
-            </div>
+        <div class="form-group">
+          <label for="n_plan">Plan:</label>
+          <select id="n_plan" required>
+            <option value="">Selecciona un plan</option>
+            <option value="Básico">Básico</option>
+            <option value="Premium">Premium</option>
+            <option value="VIP">VIP</option>
+            <option value="Anual">Anual</option>
+          </select>
+        </div>
 
+<<<<<<< HEAD
           
           
             </div>
@@ -114,8 +124,16 @@ function agregar_nuevos_miembros() {
               <button type="button" class="btn-guardar" onclick="guardar_miembro()">Guardar Miembro</button>
               <button type="button" class="btn-cancelar" onclick="limpiarFormulario()">Limpiar</button>
             </div>
+=======
+        <div class="form-actions">
+          <button type="button" class="btn-guardar" onclick="guardar_miembro()">Guardar Miembro</button>
+          <button type="button" class="btn-cancelar" onclick="limpiarFormulario()">Limpiar</button>
+        </div>
+
+>>>>>>> 5efc2e7 (Actualizacion 1.1)
       </form>
-      `
+    </div>
+  `;
 }
 
 // ======================
@@ -227,6 +245,7 @@ function mostrar_planes() {
   document.getElementById("contenido").innerHTML = `
     <div class="panel-form">
       <h2>Planes</h2>
+<<<<<<< HEAD
        <div class="form-group">
               <label for="nuevo_miembro.plan">Plan:</label>
               <select id="nuevo_miembro.plan" required>
@@ -236,6 +255,18 @@ function mostrar_planes() {
                 <option value="VIP">VIP</option>
               <option value="Anual">Anual</option>
             </select>
+=======
+      <div class="form-group">
+        <label for="plan">Selecciona un plan:</label>
+        <select id="plan" required>
+          <option value="">Selecciona un plan</option>
+          <option value="Básico">Básico</option>
+          <option value="Premium">Premium</option>
+          <option value="VIP">VIP</option>
+          <option value="Anual">Anual</option>
+        </select>
+      </div>
+>>>>>>> 5efc2e7 (Actualizacion 1.1)
     </div>
   `;
 }

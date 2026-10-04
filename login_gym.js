@@ -11,7 +11,11 @@ function login() {
 
             if (username === user_admin.username && password === user_admin.password) {
                 alert("Inicio de sesión exitoso");
+<<<<<<< HEAD
                 window.location.href = "/index2.html"; // Redirigir a la página de inicio
+=======
+                window.location.href = "index2.html"; // Redirigir a la página de inicio
+>>>>>>> 5efc2e7 (Actualizacion 1.1)
             } else {
                 alert("Usuario o contraseña incorrectos");
             }
