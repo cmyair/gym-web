@@ -115,7 +115,6 @@ function agregar_nuevos_miembros() {
           </select>
         </div>
 
-<<<<<<< HEAD
           
           
             </div>
@@ -124,13 +123,6 @@ function agregar_nuevos_miembros() {
               <button type="button" class="btn-guardar" onclick="guardar_miembro()">Guardar Miembro</button>
               <button type="button" class="btn-cancelar" onclick="limpiarFormulario()">Limpiar</button>
             </div>
-=======
-        <div class="form-actions">
-          <button type="button" class="btn-guardar" onclick="guardar_miembro()">Guardar Miembro</button>
-          <button type="button" class="btn-cancelar" onclick="limpiarFormulario()">Limpiar</button>
-        </div>
-
->>>>>>> 5efc2e7 (Actualizacion 1.1)
       </form>
     </div>
   `;
@@ -245,7 +237,6 @@ function mostrar_planes() {
   document.getElementById("contenido").innerHTML = `
     <div class="panel-form">
       <h2>Planes</h2>
-<<<<<<< HEAD
        <div class="form-group">
               <label for="nuevo_miembro.plan">Plan:</label>
               <select id="nuevo_miembro.plan" required>
@@ -255,18 +246,6 @@ function mostrar_planes() {
                 <option value="VIP">VIP</option>
               <option value="Anual">Anual</option>
             </select>
-=======
-      <div class="form-group">
-        <label for="plan">Selecciona un plan:</label>
-        <select id="plan" required>
-          <option value="">Selecciona un plan</option>
-          <option value="Básico">Básico</option>
-          <option value="Premium">Premium</option>
-          <option value="VIP">VIP</option>
-          <option value="Anual">Anual</option>
-        </select>
-      </div>
->>>>>>> 5efc2e7 (Actualizacion 1.1)
     </div>
   `;
 }
