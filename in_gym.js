@@ -218,7 +218,7 @@ function mostrar_stock() {
   document.getElementById("contenido").innerHTML = `
     <div class="panel-form">
       <h2>Tienda</h2>
-      <p>Sección en construcción...</p>
+      <p>Sección en construcción "Fernando gay"...</p>
     </div>
   `;
 }
