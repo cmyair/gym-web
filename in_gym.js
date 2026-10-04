@@ -106,16 +106,7 @@ function agregar_nuevos_miembros() {
               <input type ="date" id="n_fechaNacimiento" requird>
             </div>
 
-            <div class="form-group">
-              <label for="nuevo_miembro.plan">Plan:</label>
-              <select id="nuevo_miembro.plan" required>
-                <option value="">Selecciona un plan</option>
-                <option value="Básico">Básico</option>
-                <option value="Premium">Premium</option>
-                <option value="VIP">VIP</option>
-              <option value="Anual">Anual</option>
-            </select>
-
+          
           
             </div>
 
@@ -236,7 +227,15 @@ function mostrar_planes() {
   document.getElementById("contenido").innerHTML = `
     <div class="panel-form">
       <h2>Planes</h2>
-      <p>Sección en construcción...</p>
+       <div class="form-group">
+              <label for="nuevo_miembro.plan">Plan:</label>
+              <select id="nuevo_miembro.plan" required>
+                <option value="">Selecciona un plan</option>
+                <option value="Básico">Básico</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+              <option value="Anual">Anual</option>
+            </select>
     </div>
   `;
 }
