@@ -128,59 +128,7 @@ function agregar_nuevos_miembros() {
   `;
 }
 
-// ======================
-// PANEL: AGREGAR MIEMBRO
-// ======================
-/* function mostrar_nuevos_miembros() {
-  const contenedor = document.getElementById("contenido");
 
-  contenedor.innerHTML = `
-    <div class="panel-form">
-      <h2>Agregar Nuevo Miembro</h2>
-
-      <form id="form-miembro" onsubmit="return false;">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Ej: Juan" required>
-          </div>
-          <div class="form-group">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" placeholder="Ej: Pérez" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Fecha de Nacimiento</label>
-          <div class="fecha-inputs">
-            <input type="number" id="dia" placeholder="Día" min="1" max="31" required>
-            <input type="number" id="mes" placeholder="Mes" min="1" max="12" required>
-            <input type="number" id="anio" placeholder="Año" min="1940" max="2015" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="plan">Plan</label>
-          <select id="plan" required>
-            <option value="">Selecciona un plan</option>
-            <option value="Básico">Básico</option>
-            <option value="Premium">Premium</option>
-            <option value="VIP">VIP</option>
-            <option value="Anual">Anual</option>
-          </select>
-        </div>
-
-        <div class="form-actions">
-          <button type="button" class="btn-guardar" onclick="guardar_miembro()">Guardar Miembro</button>
-          <button type="button" class="btn-cancelar" onclick="limpiarFormulario()">Limpiar</button>
-        </div>
-      </form>
-
-      <div id="mensaje" class="mensaje"></div>
-    </div>
-  `;
-}
- */
 // Guardar el miembro
 function guardar_miembro() {
   const nombre = document.getElementById("nombre").value;
@@ -228,7 +176,7 @@ function mostrar_stock() {
   document.getElementById("contenido").innerHTML = `
     <div class="panel-form">
       <h2>Tienda</h2>
-      <p>Sección en construcción "Fernando gay"...</p>
+      <p>Sección en construcción (class push)...</p>
     </div>
   `;
 }
