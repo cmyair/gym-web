@@ -417,7 +417,7 @@ function mostrar_stock() {
       <h2>Tienda</h2>
       <p style="text-align:center; color:#94a3b8; margin-top:40px;">
         Sección en construcción...<br>
-        Aquí podrás gestionar productos, suplementos y merchandising.
+        "Podras comprar productos de la tienda de ashakim"
       </p>
     </div>
   `;
