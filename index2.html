@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Gym - Panel de Control</title>
-    <link rel="stylesheet" href="styless.css">
-    <script src="gym.js" defer></script>
-</head>
-<body>
-    <div class="app-container">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atlas Gym | Panel de Control</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="gym.js" defer></script>
+    </head>
+    <body>
+        <div class="app-container">
 
-        <!-- BARRA LATERAL IZQUIERDA -->
-        <aside class="sidebar">
+            <!-- BARRA LATERAL -->
+            <aside class="sidebar">
             <div class="logo">
                 <h2>Atlas Gym</h2>
             </div>
 
-            <nav class="menu">
-                <button class="btn-nav" onclick="agregar_nuevos_miembros()">Agregar Miembro</button>
-                <button class="btn-nav" onclick="mostrar_stock()">Tienda</button>
-                <button class="btn-nav" onclick="mostrar_planes()">Planes</button>
-                <button class="btn-nav" onclick="mostrar_eventos()">Eventos</button>
-                <button class="btn-nav" onclick="mostrar_lista_miembros()">Lista de Miembros</button>
-                <button class="btn-nav" onclick="mostrar_settings()">Ajustes</button>
+            <nav class="menu" aria-label="Menú principal">
+                <button type="button" class="btn-nav" onclick="agregar_nuevos_miembros()">
+                Agregar Miembro
+                </button>
+                <button type="button" class="btn-nav" onclick="mostrar_lista_miembros()">
+                Lista de Miembros
+                </button>
+                <button type="button" class="btn-nav" onclick="mostrar_planes()">
+                Planes
+                </button>
+                <button type="button" class="btn-nav" onclick="mostrar_stock()">
+                Tienda
+                </button>
+                <button type="button" class="btn-nav" onclick="mostrar_eventos()">
+                Eventos
+                </button>
+                <button type="button" class="btn-nav" onclick="mostrar_settings()">
+                Ajustes
+                </button>
             </nav>
-        </aside>
 
-        <!-- ÁREA PRINCIPAL -->
-        <main class="main">
-            <div id="contenido" class="contenido">
-                <h1>Atlas Gym 🏋️‍♂️</h1>
-                <p>Selecciona una opción del menú</p>
+            <div class="sidebar-footer">
+                <button type="button" class="btn-logout" onclick="cerrarSesion()">
+                Cerrar sesión
+                </button>
             </div>
-        </main>
+            </aside>
 
-        
+            <!-- ÁREA PRINCIPAL -->
+            <main class="main">
+            <header class="main-header">
+                <h1 class="page-title">Panel de Control</h1>
+                <p class="user-info">
+                Sesión: <span id="nombre-usuario">admin</span>
+                </p>
+            </header>
 
-    </div>
-</body>
+            <div id="contenido" class="contenido">
+                <div class="welcome">
+                <h2>Atlas Gym 🏋️‍♂️</h2>
+                <p>Selecciona una opción del menú lateral para comenzar</p>
+                </div>
+            </div>
+            </main>
+
+        </div>
+    </body>
 </html>

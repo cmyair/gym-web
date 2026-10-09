@@ -1,34 +1,54 @@
- //password predeterminada
-let user_admin = {
-    username: "admin",
-    password: "yair123"
+// ======================
+// ATLAS GYM - Login
+// ======================
+
+// Credenciales (en un proyecto real esto iría en un backend)
+const ADMIN = {
+  username: "admin",
+  password: "yair123"
 };
 
-//Inicio de sesion
+// ---------- Inicio de sesión ----------
 function login() {
-            let username = document.getElementById("user_admin").value;
-            let password = document.getElementById("password").value;
+  const username = document.getElementById("user_admin").value.trim();
+  const password = document.getElementById("password").value;
 
-            if (username === user_admin.username && password === user_admin.password) {
-                alert("Inicio de sesión exitoso");
-                window.location.href = "index2.html"; // Redirigir a la página de inicio
-            } else {
-                alert("Usuario o contraseña incorrectos");
-            }
+  if (username === ADMIN.username && password === ADMIN.password) {
+    // Guardar sesión simple
+    sessionStorage.setItem("atlas_logged", "true");
+    sessionStorage.setItem("atlas_user", username);
+
+    alert("Inicio de sesión exitoso");
+    window.location.href = "index2.html";
+  } else {
+    alert("Usuario o contraseña incorrectos");
+  }
 }
 
-//funcion para cambiar the password
+// ---------- Restablecer contraseña (solo en memoria de la sesión) ----------
 function resetpassword() {
-    let password = prompt("Ingrese su contraseña actual:");
-    if (password === user_admin.password) {
-        let newPassword = prompt("Ingrese la nueva contraseña:");
-        if (newPassword) {
-            user_admin.password = newPassword;
-            alert("Contraseña restablecida correctamente");
-        } else {
-            alert("No se ingresó una nueva contraseña");
-        }
+  const passwordActual = prompt("Ingrese su contraseña actual:");
+
+  if (passwordActual === ADMIN.password) {
+    const nueva = prompt("Ingrese la nueva contraseña:");
+
+    if (nueva && nueva.trim().length >= 4) {
+      ADMIN.password = nueva.trim();
+      alert("Contraseña restablecida correctamente.\nNota: este cambio solo dura mientras no recargues la página (es solo un prototipo).");
     } else {
-        alert("La contraseña actual es incorrecta");
+      alert("La nueva contraseña debe tener al menos 4 caracteres.");
     }
+  } else if (passwordActual !== null) {
+    alert("La contraseña actual es incorrecta");
+  }
 }
+
+// Permitir Enter para iniciar sesión
+document.addEventListener("DOMContentLoaded", () => {
+  const passwordInput = document.getElementById("password");
+  if (passwordInput) {
+    passwordInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") login();
+    });
+  }
+});
